@@ -10,6 +10,17 @@ const colorize = c => {
 
 const Parcel = ({ parcel }) => {
   const classification = _.get(parcel, 'properties.classificatie.0', 'N/A')
+  if (!parcel)
+    return (
+      <div className="row my-4 mr-0 pr-3 text-center">
+        <h2
+          className="text-muted text-center mt-4"
+          style={{ textAlign: 'center' }}
+        >
+          Select a field
+        </h2>
+      </div>
+    )
   return (
     <div className="row my-4 mr-0 pr-3">
       <div className="col-8">
