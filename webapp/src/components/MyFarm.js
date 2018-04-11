@@ -33,9 +33,6 @@ class MyFarm extends React.Component {
             </div>
           </div>
         </div>
-        <pre>
-          {JSON.stringify(_.omit(this.state.parcel, 'geometry'), null, 2)}
-        </pre>
         <AddData />
       </div>
     )
