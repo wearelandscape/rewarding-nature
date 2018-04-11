@@ -52,7 +52,7 @@ class Deals extends React.Component {
         </div>
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
-            <h5>20% herb rich grass land</h5>
+            <h5>20% herb rich grass land in 2018</h5>
             <div className="row align-items-end">
               <div className="col">
                 <Progressbar
