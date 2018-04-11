@@ -15,7 +15,11 @@ const Parcel = ({ parcel }) => {
       <div className="col-8">
         <div className="card bg-secondary text-white">
           <div className="card-header">
-            Parcel {_.get(parcel, 'properties.fieldid')}
+            Field {_.get(parcel, 'properties.fieldid')} ({Math.round(
+              _.get(parcel, 'properties.area', 0) / 100,
+              2
+            ) / 100}{' '}
+            Ha)
           </div>
           <div className="card-body">
             <h3 className="card-title">2018 KPIs</h3>

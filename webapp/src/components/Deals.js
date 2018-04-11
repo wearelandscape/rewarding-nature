@@ -47,7 +47,7 @@ class Deals extends React.Component {
     return (
       <div className="card">
         <div className="card-body">
-          <h1 className="card-title">Biodiversity deals</h1>
+          <h2 className="card-title">Biodiversity deals</h2>
           <div className="card-text">These are your current deals.</div>
         </div>
         <ul className="list-group list-group-flush">
