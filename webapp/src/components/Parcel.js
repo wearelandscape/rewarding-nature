@@ -22,12 +22,40 @@ const Parcel = ({ parcel }) => {
             <h3 className="card-title">2018 KPIs</h3>
             <div className="card-text">Herb species: {_.random(4)}</div>
           </div>
-          <div className="card-body bg-light text-dark">
-            <div className="card-title">Advice</div>
-            <div className="card-text d-flex align-items-center">
-              <i className="material-icons">check</i> Use better manure
+          {classification == 'C' && (
+            <div className="card-body bg-light text-dark">
+              <div className="card-title">Advice (geel)</div>
+              <div className="card-text d-flex align-items-top mb-3">
+                <i className="material-icons">check</i>
+                <span>
+                  Lower nutrient supply by 10%<br />
+                  <small>
+                    Based on improved results on 5 farms in your collecive
+                  </small>
+                </span>
+              </div>
+              <div className="card-text d-flex align-items-top mb-3">
+                <i className="material-icons">check</i>
+                <span>
+                  Increase ground watertable to 40cm below surface<br />
+                  <small>Based on information from Waterschappen</small>
+                </span>
+              </div>
             </div>
-          </div>
+          )}
+          {classification == 'B' && (
+            <div className="card-body bg-light text-dark">
+              <div className="card-title">Advice (groen)</div>
+              <div className="card-text d-flex align-items-top mb-3">
+                <i className="material-icons">check</i>
+                <span>
+                  Let herbs come to bloom by delay mowing of the whole field or
+                  specific area<br />
+                  <small>Based on best practices</small>
+                </span>
+              </div>
+            </div>
+          )}
         </div>
       </div>
       <div className="col-4 text-center">
