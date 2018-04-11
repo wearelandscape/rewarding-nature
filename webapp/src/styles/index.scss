@@ -6,3 +6,66 @@
 .page {
   padding: $spacer;
 }
+
+.label {
+  white-space: normal;
+  width: 150px;
+}
+
+.green {
+  background-color: lightgreen;
+}
+
+.black {
+  background-color: yellow;
+}
+
+.farmcontrol {
+  padding: 0 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  width: 118px;
+}
+
+.filecontrol {
+  padding: 0 0;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 0;
+  width: 88px;
+}
+
+.fileContainer [type='file'] {
+  cursor: inherit;
+  display: block;
+  font-size: 999px;
+  filter: alpha(opacity=0);
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.fileContainer {
+  width: 95%;
+  width: calc(100% - 8px);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 2px;
+  padding: 1px;
+  background-color: white;
+  border: 1px solid rgba(0, 74, 109, 1);
+  color: rgba(0, 74, 109, 1);
+  overflow: hidden;
+  position: relative;
+  margin: 4px 2px 0 2px;
+}
+
+.fileContainer:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
