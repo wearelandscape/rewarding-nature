@@ -2,15 +2,14 @@ import React from 'react'
 import _ from 'lodash'
 
 const colorize = c => {
-  console.log(c)
   if (c === 'A' || c === 'B') return 'bg-success'
   if (c === 'C') return 'bg-warning'
   if (c === 'D') return 'bg-danger'
-  return 'bg-secondary'
+  return 'bg-light text-secondary'
 }
 
 const Parcel = ({ parcel }) => {
-  const classification = _.get(parcel, 'properties.classification', 'N/A')
+  const classification = _.get(parcel, 'properties.classificatie.0', 'N/A')
   return (
     <div className="row my-4 mr-0 pr-3">
       <div className="col-8">
@@ -59,14 +58,16 @@ const Parcel = ({ parcel }) => {
         </div>
       </div>
       <div className="col-4 text-center">
-        <h5 className="small text-muted">Automatically generated score</h5>
+        <h5 className="small text-muted">Automatically generated KPI score</h5>
         <div
-          className={['card', colorize(classification)].join(' ')}
+          className={['card text-white', colorize(classification)].join(' ')}
           style={{ borderRadius: '1000px' }}
         >
-          <div className="display-2 text-white py-3">{classification}</div>
+          <div className="display-2 py-3">{classification}</div>
         </div>
-        <div className="mt-4 btn btn-info btn-small">I don't agree</div>
+        {classification !== 'N/A' ? (
+          <div className="mt-4 btn btn-info btn-small">I don't agree</div>
+        ) : null}
       </div>
     </div>
   )
