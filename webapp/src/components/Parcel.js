@@ -61,11 +61,12 @@ const Parcel = ({ parcel }) => {
       <div className="col-4 text-center">
         <h5 className="small text-muted">Automatically generated score</h5>
         <div
-          className={['card', colorize(classification)].join(', ')}
+          className={['card', colorize(classification)].join(' ')}
           style={{ borderRadius: '1000px' }}
         >
           <div className="display-2 text-white py-3">{classification}</div>
         </div>
+        <div className="mt-4 btn btn-info btn-small">I don't agree</div>
       </div>
     </div>
   )
