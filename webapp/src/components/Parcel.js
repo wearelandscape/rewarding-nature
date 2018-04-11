@@ -45,9 +45,19 @@ const Parcel = ({ parcel }) => {
             <h3 className="card-title">2018 KPIs</h3>
             <div className="card-text">Herb species: {herbs()}</div>
           </div>
-          {classification == 'C' && (
+          {classification === 'C' && (
             <div className="card-body bg-light text-dark">
-              <div className="card-title">Advice (geel)</div>
+              <div className="card-title">Advice</div>
+              <div className="card-text d-flex align-items-top mb-3">
+                <i className="material-icons">check</i>
+                <span>
+                  Plantain Chickory, White clover and Yarrow<br />
+                  <small>
+                    These herbs fit best on your uploaded soil data of june
+                    2017.
+                  </small>
+                </span>
+              </div>
               <div className="card-text d-flex align-items-top mb-3">
                 <i className="material-icons">check</i>
                 <span>
@@ -66,9 +76,9 @@ const Parcel = ({ parcel }) => {
               </div>
             </div>
           )}
-          {classification == 'B' && (
+          {classification === 'B' && (
             <div className="card-body bg-light text-dark">
-              <div className="card-title">Advice (groen)</div>
+              <div className="card-title">Advice</div>
               <div className="card-text d-flex align-items-top mb-3">
                 <i className="material-icons">check</i>
                 <span>
