@@ -4,24 +4,32 @@ import DealProgress from './DealProgress'
 import Progressbar from './Progressbar'
 
 const data = {
-  labels: ['apples', 'bananas', 'cherries', 'dates'],
+  labels: ['herb-rich grassland', 'mixed grassland', 'herb-poor grassland'],
   values: [
     {
-      month: 'Q1-2016',
-      apples: 3840,
-      bananas: 1920,
-      cherries: 1960,
-      dates: 400
+      month: '2015',
+      'herb-rich grassland': 0,
+      'mixed grassland': 3,
+      'herb-poor grassland': 5
     },
     {
-      month: 'Q2-2016',
-      apples: 1600,
-      bananas: 1440,
-      cherries: 960,
-      dates: 400
+      month: '2016',
+      'herb-rich grassland': 1,
+      'mixed grassland': 6,
+      'herb-poor grassland': 3
     },
-    { month: 'Q3-2016', apples: 640, bananas: 960, cherries: 640, dates: 600 },
-    { month: 'Q4-2016', apples: 320, bananas: 480, cherries: 640, dates: 400 }
+    {
+      month: '2017',
+      'herb-rich grassland': 2,
+      'mixed grassland': 5,
+      'herb-poor grassland': 3
+    },
+    {
+      month: '2018',
+      'herb-rich grassland': 3,
+      'mixed grassland': 5,
+      'herb-poor grassland': 2
+    }
   ]
 }
 
@@ -68,8 +76,8 @@ class Deals extends React.Component {
               </div>
             </div>
             <Collapse isOpen={this.state.collapse}>
-              <div className="my-4" style={{ width: '600px', height: '400px' }}>
-                <DealProgress data={data} width={600} height={400} />
+              <div className="my-4" style={{ width: '900px', height: '400px' }}>
+                <DealProgress data={data} width={900} height={400} />
               </div>
             </Collapse>
           </li>

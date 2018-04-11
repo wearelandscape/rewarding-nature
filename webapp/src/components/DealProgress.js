@@ -53,7 +53,7 @@ class DealProgress extends React.Component {
       .domain([d3.min(series, stackMin), d3.max(series, stackMax)])
       .rangeRound([height - margin.bottom, margin.top])
 
-    const z = d3.scaleOrdinal(d3.schemeCategory10)
+    const z = d3.scaleOrdinal().range(['#28a745', '#ffc107', '#dc3545'])
 
     svg
       .append('g')
