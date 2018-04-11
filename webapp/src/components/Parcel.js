@@ -10,6 +10,7 @@ const colorize = c => {
 
 const Parcel = ({ parcel }) => {
   const classification = _.get(parcel, 'properties.classificatie.0', 'N/A')
+
   if (!parcel)
     return (
       <div className="row my-4 mr-0 pr-3 text-center">
@@ -21,6 +22,14 @@ const Parcel = ({ parcel }) => {
         </h2>
       </div>
     )
+
+  const herbs = () => {
+    if (classification === 'D') return 0
+    if (classification === 'C') return _.random(1, 3)
+    if (classification === 'B') return _.random(4, 20)
+    else return 'n/a'
+  }
+
   return (
     <div className="row my-4 mr-0 pr-3">
       <div className="col-8">
@@ -34,7 +43,7 @@ const Parcel = ({ parcel }) => {
           </div>
           <div className="card-body">
             <h3 className="card-title">2018 KPIs</h3>
-            <div className="card-text">Herb species: {_.random(4)}</div>
+            <div className="card-text">Herb species: {herbs()}</div>
           </div>
           {classification == 'C' && (
             <div className="card-body bg-light text-dark">
